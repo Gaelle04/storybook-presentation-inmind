@@ -1,0 +1,5 @@
+
+.btn { padding:.6rem 1rem; border-radius:.5rem; border:1px solid #ccc; font-weight:600; cursor:pointer; }
+.btn.primary { background:#1976d2; color:#fff; border-color:#1976d2; }
+.btn.outline { background:transparent; color:#1976d2; border-color:#1976d2; }
+.btn:disabled { opacity:.5; cursor:not-allowed; }
