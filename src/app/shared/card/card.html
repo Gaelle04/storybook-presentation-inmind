@@ -1,0 +1,15 @@
+<div class="card" [ngClass]="{'dark-mode': darkMode, 'list-style': listStyle}">
+  <img *ngIf="image" [src]="image" alt="Card image" class="card-image" />
+  <div class="card-body">
+    <h3 class="card-title">{{ title }}</h3>
+    <h5 class="card-subtitle">{{ subtitle }}</h5>
+    <p class="card-content">{{ content }}</p>
+
+    <button 
+      *ngIf="buttonLabel" 
+      class="card-button" 
+      (click)="onButtonClick()">
+      {{ buttonLabel }}
+    </button>
+  </div>
+</div>
