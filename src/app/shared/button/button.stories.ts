@@ -17,3 +17,15 @@ const meta: Meta<Button> = {
 export default meta;
 type Story = StoryObj<Button>;
 export const Playground: Story = {};
+
+export const Primary: Story = {
+    args: { label: 'Primary', variant: 'primary' },
+  };
+  
+  export const Outline: Story = {
+    args: { label: 'Outline', variant: 'outline' }, 
+  };
+  
+  export const Disabled: Story = {
+    args: { disabled: true }, 
+  };

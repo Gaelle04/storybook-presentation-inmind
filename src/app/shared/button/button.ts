@@ -6,6 +6,7 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
   templateUrl: './button.html',
   styleUrl: './button.css'
 })
+
 export class Button {
   @Input() label = 'Click me';
   @Input() variant: 'primary' | 'outline' = 'primary';
