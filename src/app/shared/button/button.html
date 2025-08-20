@@ -1,1 +1,10 @@
-<p>button works!</p>
+
+<button
+  class="btn"
+  [class.primary]="variant === 'primary'"
+  [class.outline]="variant === 'outline'"
+  [disabled]="disabled"           
+  (click)="onClick()" 
+ > 
+  {{ label }}
+</button>
