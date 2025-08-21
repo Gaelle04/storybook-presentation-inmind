@@ -40,6 +40,8 @@
     "@compodoc/compodoc": "^1.1.26",
     "@storybook/addon-docs": "^9.1.2",
     "@storybook/angular": "^9.1.2",
+    "@storybook/jest": "^0.2.2",
+    "@storybook/testing-library": "^0.2.1",
     "@types/jasmine": "~5.1.0",
     "jasmine-core": "~5.7.0",
     "karma": "~6.4.0",

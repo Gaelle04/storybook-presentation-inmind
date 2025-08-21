@@ -1,0 +1,5 @@
+<label class="toggle">
+    <input type="checkbox" [checked]="checked" (change)="onToggle($event)" />
+    <span class="text">{{ checked ? onLabel : offLabel }}</span>
+  </label>
+  
