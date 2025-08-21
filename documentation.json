@@ -129,6 +129,92 @@
             "templateData": "<p>button works!</p>\r\n"
         },
         {
+            "name": "Button",
+            "id": "component-Button-5db15648b56a4efa6ee3de580d39fb98c2025b6b456034b3662cd4739400c6a9cf150cec7532ffb98f4af9215ad7f87d9edb32bc5c0a8dc093138449f4771d1a",
+            "file": "src/app/shared/button/button.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-button",
+            "styleUrls": [],
+            "styles": [],
+            "templateUrl": [
+                "./button.html"
+            ],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [
+                {
+                    "name": "disabled",
+                    "defaultValue": "false",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 13,
+                    "type": "boolean",
+                    "decorators": []
+                },
+                {
+                    "name": "label",
+                    "defaultValue": "'Click me'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 11,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "variant",
+                    "defaultValue": "'primary'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 12,
+                    "type": "\"primary\" | \"outline\"",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [
+                {
+                    "name": "clicked",
+                    "defaultValue": "new EventEmitter<void>()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 14,
+                    "type": "EventEmitter"
+                }
+            ],
+            "propertiesClass": [],
+            "methodsClass": [
+                {
+                    "name": "onClick",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 15,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": false,
+            "imports": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, Input, Output, EventEmitter } from '@angular/core';\n\n@Component({\n  selector: 'app-button',\n  imports: [],\n  templateUrl: './button.html',\n  styleUrl: './button.css'\n})\n\nexport class Button {\n  @Input() label = 'Click me';\n  @Input() variant: 'primary' | 'outline' = 'primary';\n  @Input() disabled = false;            \n  @Output() clicked = new EventEmitter<void>();\n  onClick() {\n    if (!this.disabled) this.clicked.emit();\n  }\n  \n}\n",
+            "styleUrl": "./button.css",
+            "assetsDirs": [],
+            "styleUrlsData": "",
+            "stylesData": "",
+            "extends": [],
+            "templateData": "\n<button\n  class=\"btn\"\n  [class.primary]=\"variant === 'primary'\"\n  [class.outline]=\"variant === 'outline'\"\n  [disabled]=\"disabled\"           \n  (click)=\"onClick()\" \n > \n  {{ label }}\n</button>\n"
+        },
+        {
             "name": "ButtonComponent",
             "id": "component-ButtonComponent-5747b2121bdc472b32e41e4e47db44dbd7601fe73e9c7b3d0f82e7d1aaf97be0d13d4880fee19b0e4d511178aa52a24a5a9ea3ee0034d204ffd659c0aae43e41",
             "file": "src/stories/button.component.ts",
@@ -532,6 +618,110 @@
             ],
             "stylesData": "",
             "extends": []
+        },
+        {
+            "name": "Toggle",
+            "id": "component-Toggle-22613afdcefde447b90c4c21780bde4e4568c3b3b8c96b1870fb7a009d26dfebb10a09dffb128a12d9f373e6e5392858e38b7ae0417cd537b591d4d1f3f4c38c",
+            "file": "src/app/shared/toggle/toggle.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-toggle",
+            "styleUrls": [],
+            "styles": [],
+            "templateUrl": [
+                "./toggle.html"
+            ],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [
+                {
+                    "name": "checked",
+                    "defaultValue": "false",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 11,
+                    "type": "boolean",
+                    "decorators": []
+                },
+                {
+                    "name": "offLabel",
+                    "defaultValue": "'Off'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 13,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "onLabel",
+                    "defaultValue": "'On'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 12,
+                    "type": "string",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [
+                {
+                    "name": "checkedChange",
+                    "defaultValue": "new EventEmitter<boolean>()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 14,
+                    "type": "EventEmitter"
+                }
+            ],
+            "propertiesClass": [],
+            "methodsClass": [
+                {
+                    "name": "onToggle",
+                    "args": [
+                        {
+                            "name": "event",
+                            "type": "Event",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 16,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "event",
+                            "type": "Event",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": false,
+            "imports": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component , Input, Output, EventEmitter} from '@angular/core';\n\n@Component({\n  selector: 'app-toggle',\n  imports: [],\n  templateUrl: './toggle.html',\n  styleUrl: './toggle.css'\n})\n\nexport class Toggle {\n  @Input() checked = false;\n  @Input() onLabel = 'On';\n  @Input() offLabel = 'Off';\n  @Output() checkedChange = new EventEmitter<boolean>();\n\n  onToggle(event: Event) {\n    const input = event.target as HTMLInputElement;\n    this.checked = input.checked;          \n    this.checkedChange.emit(this.checked); \n  }\n\n}\n",
+            "styleUrl": "./toggle.css",
+            "assetsDirs": [],
+            "styleUrlsData": "",
+            "stylesData": "",
+            "extends": [],
+            "templateData": "<label class=\"toggle\">\n    <input type=\"checkbox\" [checked]=\"checked\" (change)=\"onToggle($event)\" />\n    <span class=\"text\">{{ checked ? onLabel : offLabel }}</span>\n  </label>\n  \n"
         }
     ],
     "modules": [],
@@ -599,6 +789,14 @@
                 "linktype": "component",
                 "name": "Button",
                 "coveragePercent": 0,
+                "coverageCount": "0/6",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/shared/toggle/toggle.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "Toggle",
                 "coverageCount": "0/1",
                 "status": "low"
             },
